@@ -1,0 +1,48 @@
+<main>
+	<div class="container">
+	  <div class="form-section">
+		<h2>Fruit Store</h2>
+  
+	
+		<div class="form-group">
+		  <label for="name">Name:</label>
+		  <input type="text" id="name" [(ngModel)]="name" name="name" required />
+		</div>
+
+        <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" [(ngModel)]="quantity" name="quantity" required />
+          </div>
+  
+		<div class="form-group">
+		  <label for="price">Price:</label>
+		  <input type="price" id="price" [(ngModel)]="price" name="price" required />
+		</div>
+  
+  
+		<button class="btn" (click)="addFruit()">Add to cart</button>
+	  </div>
+  
+	  <div class="table-section">
+
+		<h1>Fruit List</h1>
+
+		<table class="table">
+		  <thead>
+			<tr>
+			  <th>Name</th>
+			  <th>Price</th>
+              <th>Quantity</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr *ngFor="let fruits of FruitList">
+			  <td>{{ fruits.name }}</td>
+			  <td>{{ fruits.price }}</td>
+			  <td>{{ fruits.quantity }}</td>
+			</tr>
+		  </tbody>
+		</table>
+	  </div>
+	</div>
+  </main>
